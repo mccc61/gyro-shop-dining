@@ -13,8 +13,7 @@ export type MenuCategory = {
   items: MenuItem[];
 };
 
-const uploads = "https://gyroshopdining.com/wp-content/uploads";
-const image = (path: string) => `${uploads}/${path}`;
+const image = (path: string) => `/menu-images/${path.split("/").at(-1)}`;
 
 export const menuCategories: MenuCategory[] = [
   {

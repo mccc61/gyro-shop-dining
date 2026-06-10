@@ -13,7 +13,7 @@ export default function MenuPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-olive px-5 py-20 text-center text-white sm:py-28">
-        <Image src="https://gyroshopdining.com/wp-content/uploads/2026/04/grilled-meat-with-fried-potatoes-and-vegetable-sal-2026-01-09-14-53-31-utc-780x780.jpg" alt="Halal Mediterranean platter at Gyro Shop Dining" fill priority unoptimized className="object-cover opacity-20" sizes="100vw" />
+        <Image src="/menu-images/grilled-meat-with-fried-potatoes-and-vegetable-sal-2026-01-09-14-53-31-utc-780x780.jpg" alt="Halal Mediterranean platter at Gyro Shop Dining" fill priority className="object-cover opacity-20" sizes="100vw" />
         <div className="absolute inset-0 bg-[#024579]/80" />
         <div className="grain absolute inset-0 opacity-25" />
         <div className="relative mx-auto max-w-3xl">
@@ -45,7 +45,7 @@ export default function MenuPage() {
                 {category.items.map((item) => (
                   <article key={item.name} className={`group overflow-hidden rounded-[1.25rem] border border-charcoal/10 bg-[#FAF9F6] shadow-sm transition hover:-translate-y-1 hover:shadow-soft ${isTextOnly ? "p-5" : ""}`}>
                     {!isTextOnly && <div className="relative aspect-[16/9] overflow-hidden bg-sand">
-                      <Image src={item.image ?? category.image} alt={`${item.name} at Gyro Shop Dining`} fill unoptimized className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px" />
+                      <Image src={item.image ?? category.image} alt={`${item.name} at Gyro Shop Dining`} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px" />
                       <span className="absolute right-3 top-3 rounded-full bg-[#FAF9F6]/95 px-3.5 py-2 text-base font-extrabold text-terracotta shadow-sm backdrop-blur">{item.price}</span>
                     </div>}
                     <div className={isTextOnly ? "" : "p-5"}>

@@ -67,7 +67,7 @@ export default function Home() {
           <div className="mt-12 grid auto-rows-[250px] gap-5 md:grid-cols-2 lg:grid-cols-4">
             {houseFavorites.map((item, index) => (
               <Link key={item.name} href={item.href} className={`group relative overflow-hidden rounded-[1.25rem] bg-charcoal text-white shadow-sm ${item.featured ? "md:col-span-2 lg:col-span-2" : ""} ${index === 3 ? "lg:col-start-1" : ""}`}>
-                <Image src={item.image} alt={item.name} fill unoptimized className="object-cover transition duration-700 group-hover:scale-105" sizes={item.featured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 25vw"} />
+                <Image src={item.image} alt={item.name} fill className="object-cover transition duration-700 group-hover:scale-105" sizes={item.featured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 25vw"} />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/25 to-charcoal/5 transition group-hover:from-charcoal/80" />
                 <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
                   <span className="inline-flex bg-terracotta px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.14em]">{item.category}</span>

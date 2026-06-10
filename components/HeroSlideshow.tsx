@@ -5,15 +5,15 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    src: "https://gyroshopdining.com/wp-content/uploads/2018/06/greek-gyro-with-fries-close-up-2026-03-25-00-56-26-utc-780x780.jpg",
+    src: "/menu-images/greek-gyro-with-fries-close-up-2026-03-25-00-56-26-utc-780x780.jpg",
     alt: "Fresh halal gyro sandwich with fries",
   },
   {
-    src: "https://gyroshopdining.com/wp-content/uploads/2026/04/grilled-meat-with-fried-potatoes-and-vegetable-sal-2026-01-09-14-53-31-utc-780x780.jpg",
+    src: "/menu-images/grilled-meat-with-fried-potatoes-and-vegetable-sal-2026-01-09-14-53-31-utc-780x780.jpg",
     alt: "Halal mix platter with salad and fries",
   },
   {
-    src: "https://gyroshopdining.com/wp-content/uploads/2018/06/plate-of-kebab-vegetables-and-french-fries-2026-01-09-11-50-11-utc-780x780.jpg",
+    src: "/menu-images/plate-of-kebab-vegetables-and-french-fries-2026-01-09-11-50-11-utc-780x780.jpg",
     alt: "Gyro platter with vegetables and fries",
   },
 ];
@@ -38,7 +38,6 @@ export function HeroSlideshow() {
           alt={slide.alt}
           fill
           priority={index === 0}
-          unoptimized
           className={`object-cover object-center transition-opacity duration-1000 motion-reduce:transition-none ${index === active ? "opacity-100" : "opacity-0"}`}
           sizes="100vw"
         />

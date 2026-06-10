@@ -10,4 +10,4 @@ export const hours = [
   ["Monday - Thursday", "11:00 AM - 8:00 PM"],
   ["Friday - Saturday", "10:00 AM - 9:00 PM"],
   ["Sunday", "11:00 AM - 6:00 PM"],
-];
+]; 

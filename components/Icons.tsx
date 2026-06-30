@@ -12,6 +12,10 @@ export function PhoneIcon({ className = "h-5 w-5" }: IconProps) {
   return <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.5 4H5.8A1.8 1.8 0 0 0 4 5.8C4 13.64 10.36 20 18.2 20a1.8 1.8 0 0 0 1.8-1.8v-2.7l-3.6-.9-1.1 2.2a12.13 12.13 0 0 1-8.1-8.1l2.2-1.1L8.5 4Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
+export function ClockIcon({ className = "h-5 w-5" }: IconProps) {
+  return <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.7" /><path d="M12 7.5V12l3 2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>;
+}
+
 export function InstagramIcon({ className = "h-5 w-5" }: IconProps) {
   return <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" /><circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.8" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg>;
 }

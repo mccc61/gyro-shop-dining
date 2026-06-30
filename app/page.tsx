@@ -6,7 +6,7 @@ import { HeroSlideshow } from "@/components/HeroSlideshow";
 import { ArrowIcon, PhoneIcon, PinIcon } from "@/components/Icons";
 import { JsonLd } from "@/components/JsonLd";
 import { houseFavorites } from "@/data/menu";
-import { businessFacts, localBusinessJsonLd, websiteJsonLd } from "@/data/seo";
+import { localBusinessJsonLd, websiteJsonLd } from "@/data/seo";
 import { hours, siteDetails } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -21,6 +21,45 @@ export const metadata: Metadata = {
     url: "/",
   },
 };
+
+const splitFavoriteTitle = (title: string) => {
+  const words = title.split(" ");
+  if (words.length < 2) return [title, ""];
+
+  const splitAt = Math.ceil(words.length / 2);
+  return [words.slice(0, splitAt).join(" "), words.slice(splitAt).join(" ")];
+};
+
+const menuHighlights = [
+  "100% halal",
+  "Gyro sandwiches",
+  "Over rice platters",
+  "Fresh falafel",
+  "Fast food court service",
+];
+
+const localFeatureCards = [
+  {
+    label: "Made daily",
+    title: "Fresh food, fast",
+    text: "Gyros, chicken, falafel, salads, and sauces are prepared fresh for quick, flavorful meals.",
+  },
+  {
+    label: "Customer favorite",
+    title: "Over rice meals",
+    text: "Chicken, beef and lamb gyro, or falafel served over seasoned rice with salad and white sauce.",
+  },
+  {
+    label: "Always halal",
+    title: "100% halal menu",
+    text: "A full halal Mediterranean menu with sandwiches, platters, bowls, sides, desserts, and drinks.",
+  },
+  {
+    label: "Easy stop",
+    title: "Mall food court",
+    text: "Perfect for lunch, dinner, shopping breaks, movie nights, and fast family meals.",
+  },
+];
 
 export default function Home() {
   return (
@@ -59,7 +98,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 md:grid-cols-2 lg:gap-24 lg:px-8">
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-soft">
-              <Image src="/made-fresh-gyro-platter.jpg" alt="Fresh Gyro Shop Dining platter with gyro meat, falafel, pita, and salad" fill className="scale-125 object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+              <Image src="/made-fresh-gyro-platter.jpg" alt="Fresh Gyro Shop Dining platter with gyro meat, falafel, pita, and salad" fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
             <div className="absolute -bottom-5 -right-2 rounded-2xl bg-terracotta p-6 text-white sm:-right-8 sm:p-8">
               <p className="font-display text-4xl font-bold">Made fresh</p>
@@ -89,7 +128,9 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/25 to-charcoal/5 transition group-hover:from-charcoal/80" />
                 <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
                   <span className="inline-flex bg-terracotta px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.14em]">{item.category}</span>
-                  <h3 className="mt-4 font-display text-3xl font-bold uppercase leading-none tracking-[-0.025em] sm:text-4xl">{item.name}</h3>
+                  <h3 className="mt-4 font-display text-3xl font-bold uppercase leading-none tracking-[-0.025em] sm:text-4xl">
+                    {splitFavoriteTitle(item.name).map((line) => <span key={line} className="block">{line}</span>)}
+                  </h3>
                   <span className="mt-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-white/75 transition group-hover:text-white">Discover more <ArrowIcon /></span>
                 </div>
               </Link>
@@ -105,14 +146,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#FAF9F6] px-5 py-16">
-        <div className="mx-auto max-w-5xl rounded-[2rem] border border-charcoal/10 bg-white p-8 shadow-sm sm:p-10">
-          <p className="eyebrow">Local halal restaurant</p>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-[-0.025em] text-charcoal sm:text-4xl">Fresh Mediterranean food at Oxford Valley Mall</h2>
-          <p className="mt-5 max-w-3xl leading-7 text-charcoal/65">Gyro Shop Dining is a 100% halal gyro, Greek, and Mediterranean restaurant in Langhorne, Pennsylvania. Guests visit us for fast service, fresh gyros, chicken over rice, beef and lamb gyro over rice, falafel over rice, platters, salads, sides, and desserts inside the Oxford Valley Mall food court.</p>
-          <ul className="mt-7 grid gap-3 text-sm leading-6 text-charcoal/65 sm:grid-cols-2">
-            {businessFacts.map((fact) => <li key={fact} className="rounded-2xl bg-[#FAF9F6] px-4 py-3">{fact}</li>)}
-          </ul>
+      <section className="bg-[#FAF9F6] px-5 py-20">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-charcoal/10 bg-white shadow-soft">
+          <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="bg-olive p-8 text-white sm:p-10 lg:p-12">
+              <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-sand">Fresh, fast, halal</p>
+              <h2 className="mt-4 font-display text-4xl font-bold leading-tight tracking-[-0.03em] sm:text-5xl">Built for big flavor and quick cravings.</h2>
+              <p className="mt-6 max-w-xl text-base leading-8 text-white/70">From warm pita and seasoned rice to crisp salads and house sauces, Gyro Shop Dining keeps Mediterranean comfort food simple, fresh, and satisfying.</p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <ButtonLink href="/menu" variant="light">Explore menu</ButtonLink>
+                <ButtonLink href={siteDetails.phoneHref}>Call us</ButtonLink>
+              </div>
+            </div>
+            <div className="grid gap-4 bg-[#FAF9F6] p-6 sm:grid-cols-2 sm:p-8">
+              {localFeatureCards.map((card) => (
+                <div key={card.title} className="rounded-3xl border border-charcoal/10 bg-white p-5 transition hover:-translate-y-0.5 hover:border-terracotta/30 hover:shadow-sm">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-terracotta">{card.label}</p>
+                  <h3 className="mt-3 font-display text-2xl font-bold leading-tight tracking-[-0.02em] text-charcoal">{card.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-charcoal/60">{card.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="border-t border-charcoal/10 px-8 py-6 sm:px-10 lg:px-12">
+            <div className="flex flex-wrap gap-3">
+              {menuHighlights.map((highlight) => <span key={highlight} className="rounded-full bg-[#FAF9F6] px-4 py-2 text-xs font-extrabold uppercase tracking-[0.14em] text-charcoal/70">{highlight}</span>)}
+            </div>
+          </div>
         </div>
       </section>
 

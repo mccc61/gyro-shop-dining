@@ -40,7 +40,7 @@ export default function Home() {
             <h1 className="font-display text-5xl font-bold leading-[0.98] tracking-[-0.035em] sm:text-7xl lg:text-[5.8rem]">
               <span className="block">Fresh Gyro</span>
               <span className="block">Fast Services</span>
-              <span className="block">Helal Food</span>
+              <span className="block">Halal Food</span>
             </h1>
             <p className="mt-7 max-w-xl text-base leading-7 text-white/75 sm:text-lg">Freshly prepared halal Mediterranean favorites made with premium ingredients and bold flavors. Enjoy authentic gyros, grilled chicken, falafel, fresh salads, and house-made sauces.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
         <div className="absolute bottom-0 right-0 hidden rounded-tl-3xl bg-cream px-8 py-5 text-charcoal lg:block">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-terracotta">Open today</p>
-              <p className="mt-1 font-bold">Fast, Fresh, Helal.</p>
+              <p className="mt-1 font-bold">Fast, Fresh, Halal.</p>
         </div>
       </section>
 

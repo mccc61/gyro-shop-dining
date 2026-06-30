@@ -38,6 +38,17 @@ export const menuCategories: MenuCategory[] = [
     ],
   },
   {
+    name: "Over Rice",
+    description: "Fresh halal favorites served over seasoned rice with salad and sauce.",
+    image: "/over-rice-chicken.jpg",
+    items: [
+      { name: "Chicken Over Rice", description: "Tender halal chicken served over seasoned rice with fresh salad and white sauce.", price: "$17.99", image: "/over-rice-chicken.jpg", tag: "Halal" },
+      { name: "Beef & Lamb Gyro Over Rice", description: "Beef and lamb gyro meat served over seasoned rice with fresh salad and white sauce.", price: "$17.99", image: "/over-rice-beef-lamb.jpg", tag: "Halal" },
+      { name: "Falafel Over Rice", description: "Crispy falafel served over seasoned rice with fresh salad and white sauce.", price: "$16.99", image: "/over-rice-falafel.jpg", tag: "Vegetarian" },
+      { name: "Rice", description: "A side of seasoned rice.", price: "$9.99", image: "/rice-side.jpg" },
+    ],
+  },
+  {
     name: "Combos",
     description: "Your favorite gyro served with fries and a drink.",
     image: image("2018/06/greek-gyro-pita-wrap-2026-03-20-03-12-19-utc-390x390.jpg"),

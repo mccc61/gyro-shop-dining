@@ -1,14 +1,32 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
 import { HeroSlideshow } from "@/components/HeroSlideshow";
 import { ArrowIcon, PhoneIcon, PinIcon } from "@/components/Icons";
+import { JsonLd } from "@/components/JsonLd";
 import { houseFavorites } from "@/data/menu";
+import { businessFacts, localBusinessJsonLd, websiteJsonLd } from "@/data/seo";
 import { hours, siteDetails } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Halal Gyros, Over Rice & Mediterranean Food in Langhorne, PA",
+  description: "Visit Gyro Shop Dining inside Oxford Valley Mall for fresh 100% halal gyros, over rice platters, falafel, salads, sides, desserts, and fast Mediterranean food in Langhorne, PA.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Gyro Shop Dining | Halal Mediterranean Food at Oxford Valley Mall",
+    description: "Fresh halal gyros, over rice meals, platters, falafel, salads, and Mediterranean favorites in Langhorne, PA.",
+    url: "/",
+  },
+};
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={localBusinessJsonLd} />
+      <JsonLd data={websiteJsonLd} />
       <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden bg-olive text-white">
         <HeroSlideshow />
         <div className="absolute inset-0 bg-[#024579]/75" />
@@ -87,6 +105,17 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-[#FAF9F6] px-5 py-16">
+        <div className="mx-auto max-w-5xl rounded-[2rem] border border-charcoal/10 bg-white p-8 shadow-sm sm:p-10">
+          <p className="eyebrow">Local halal restaurant</p>
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-[-0.025em] text-charcoal sm:text-4xl">Fresh Mediterranean food at Oxford Valley Mall</h2>
+          <p className="mt-5 max-w-3xl leading-7 text-charcoal/65">Gyro Shop Dining is a 100% halal gyro, Greek, and Mediterranean restaurant in Langhorne, Pennsylvania. Guests visit us for fast service, fresh gyros, chicken over rice, beef and lamb gyro over rice, falafel over rice, platters, salads, sides, and desserts inside the Oxford Valley Mall food court.</p>
+          <ul className="mt-7 grid gap-3 text-sm leading-6 text-charcoal/65 sm:grid-cols-2">
+            {businessFacts.map((fact) => <li key={fact} className="rounded-2xl bg-[#FAF9F6] px-4 py-3">{fact}</li>)}
+          </ul>
+        </div>
+      </section>
+
       <section id="visit" className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid overflow-hidden rounded-[2rem] bg-olive text-white shadow-soft lg:grid-cols-[0.9fr_1.1fr]">
@@ -113,7 +142,7 @@ export default function Home() {
             </div>
             <div className="relative min-h-[360px] bg-sand">
               <iframe
-                src="https://www.google.com/maps?q=Gyro%20Shop%20Dining&output=embed"
+                src="https://www.google.com/maps?q=40.1839991,-74.8814136&z=16&output=embed"
                 title="Gyro Shop Dining location on Google Maps"
                 className="absolute inset-0 h-full w-full border-0"
                 allowFullScreen

@@ -1,17 +1,36 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
+import { JsonLd } from "@/components/JsonLd";
 import { menuCategories } from "@/data/menu";
+import { menuJsonLd } from "@/data/seo";
 import { siteDetails } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Menu",
-  description: "Explore Gyro Shop Dining's full halal menu of gyro sandwiches, platters, combos, salads, sides, drinks, and desserts.",
+  title: "Menu | Halal Gyros, Platters, Over Rice & Falafel",
+  description: "Explore the Gyro Shop Dining menu: halal gyro sandwiches, platters, chicken over rice, beef and lamb gyro over rice, falafel over rice, salads, sides, desserts, and drinks in Langhorne, PA.",
+  alternates: {
+    canonical: "/menu",
+  },
+  openGraph: {
+    title: "Gyro Shop Dining Menu | Halal Gyros, Platters & Over Rice",
+    description: "See halal gyros, platters, over rice meals, falafel, salads, sides, desserts, and drinks at Gyro Shop Dining in Oxford Valley Mall.",
+    url: "/menu",
+    images: [
+      {
+        url: "/over-rice-chicken.jpg",
+        width: 900,
+        height: 1200,
+        alt: "Chicken over rice from Gyro Shop Dining",
+      },
+    ],
+  },
 };
 
 export default function MenuPage() {
   return (
     <>
+      <JsonLd data={menuJsonLd} />
       <section className="relative overflow-hidden bg-olive px-5 py-20 text-center text-white sm:py-28">
         <Image src="/menu-images/grilled-meat-with-fried-potatoes-and-vegetable-sal-2026-01-09-14-53-31-utc-780x780.jpg" alt="Halal Mediterranean platter at Gyro Shop Dining" fill priority className="object-cover opacity-20" sizes="100vw" />
         <div className="absolute inset-0 bg-[#024579]/80" />

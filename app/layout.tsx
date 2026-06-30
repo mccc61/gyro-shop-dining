@@ -17,16 +17,50 @@ const displayFont = League_Spartan({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gyroshopdining.com"),
   title: {
-    default: "Gyro Shop Dining | Fresh Mediterranean Food",
+    default: "Gyro Shop Dining | Halal Gyros & Mediterranean Food in Langhorne, PA",
     template: "%s | Gyro Shop Dining",
   },
-  description: "Fresh halal gyros, bowls, platters, salads, and Mediterranean favorites made to order.",
-  keywords: ["halal food", "gyro restaurant", "Mediterranean food", "Greek food", "gyros", "falafel"],
+  description: "Gyro Shop Dining serves fresh 100% halal gyros, platters, over rice meals, falafel, salads, sides, and Mediterranean favorites inside Oxford Valley Mall in Langhorne, PA.",
+  keywords: ["halal food Langhorne PA", "gyro restaurant Langhorne", "Oxford Valley Mall food", "Mediterranean food", "Greek food", "gyros", "falafel", "over rice"],
+  applicationName: "Gyro Shop Dining",
+  authors: [{ name: "Gyro Shop Dining" }],
+  creator: "Gyro Shop Dining",
+  publisher: "Gyro Shop Dining",
+  category: "Restaurant",
   openGraph: {
-    title: "Gyro Shop Dining",
-    description: "Fresh halal gyros, platters, bowls, and Mediterranean favorites.",
+    title: "Gyro Shop Dining | Halal Gyros in Langhorne, PA",
+    description: "Fresh halal gyros, platters, over rice meals, falafel, salads, and Mediterranean favorites at Oxford Valley Mall.",
+    url: "https://gyroshopdining.com",
+    siteName: "Gyro Shop Dining",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/made-fresh-gyro-platter.jpg",
+        width: 1200,
+        height: 1500,
+        alt: "Fresh halal gyro platter from Gyro Shop Dining",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gyro Shop Dining | Halal Gyros in Langhorne, PA",
+    description: "Fresh halal gyros, platters, over rice meals, falafel, salads, and Mediterranean favorites at Oxford Valley Mall.",
+    images: ["/made-fresh-gyro-platter.jpg"],
+  },
+  other: {
+    "geo.region": "US-PA",
+    "geo.placename": "Langhorne",
+    "geo.position": "40.1839991;-74.8814136",
+    ICBM: "40.1839991, -74.8814136",
+    "business:contact_data:street_address": "2300 E Lincoln Hwy",
+    "business:contact_data:locality": "Langhorne",
+    "business:contact_data:region": "PA",
+    "business:contact_data:postal_code": "19047",
+    "business:contact_data:country_name": "United States",
   },
 };
 

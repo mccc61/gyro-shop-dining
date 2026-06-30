@@ -129,6 +129,12 @@ export const houseFavorites = [
     image: image("2018/06/plate-of-kebab-vegetables-and-french-fries-2026-01-09-11-50-11-utc-390x390.jpg"),
   },
   {
+    name: "Over Rice",
+    category: "Over Rice",
+    href: "/menu#over-rice",
+    image: "/over-rice-chicken.jpg",
+  },
+  {
     name: "Falafel Gyro",
     category: "Gyro Sandwiches",
     href: "/menu#gyro-sandwiches",

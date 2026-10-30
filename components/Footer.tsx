@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteDetails } from "@/data/site";
-import { InstagramIcon, PhoneIcon, PinIcon } from "./Icons";
+import { InstagramIcon, PhoneIcon, PinIcon, TikTokIcon } from "./Icons";
 
 export function Footer() {
   return (
@@ -28,7 +28,7 @@ export function Footer() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-white">Keep in touch</p>
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3">
             <Link href={siteDetails.instagramUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-sm font-bold text-cream/70 transition hover:text-white"><InstagramIcon />Instagram</Link>
-            <Link href={siteDetails.tiktokUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-sm font-bold text-cream/70 transition hover:text-white"><span className="grid h-5 w-5 place-items-center rounded-full bg-cream/15 text-[9px] font-black">TK</span>TikTok</Link>
+            <Link href={siteDetails.tiktokUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 text-sm font-bold text-cream/70 transition hover:text-white"><TikTokIcon />TikTok</Link>
           </div>
           <div className="mt-6 flex gap-4 text-xs text-cream/50">
             <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>

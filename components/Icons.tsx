@@ -19,3 +19,7 @@ export function ClockIcon({ className = "h-5 w-5" }: IconProps) {
 export function InstagramIcon({ className = "h-5 w-5" }: IconProps) {
   return <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" /><circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.8" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg>;
 }
+
+export function TikTokIcon({ className = "h-5 w-5" }: IconProps) {
+  return <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 4v10.2a4.2 4.2 0 1 1-3.2-4.08v2.25a2 2 0 1 0 1 1.83V4h2.2c.3 1.45 1.2 2.5 2.8 3.02v2.2A5.9 5.9 0 0 1 14.5 8V4Z" fill="currentColor" /></svg>;
+}

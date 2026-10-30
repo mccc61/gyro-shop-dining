@@ -36,6 +36,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Link href={siteDetails.instagramUrl} target="_blank" rel="noreferrer" aria-label="Follow Gyro Shop Dining on Instagram" className="grid h-11 w-11 place-items-center rounded-full border border-charcoal/15 text-olive transition hover:border-olive hover:bg-olive hover:text-white"><InstagramIcon /></Link>
+          <Link href={siteDetails.tiktokUrl} target="_blank" rel="noreferrer" aria-label="Follow Gyro Shop Dining on TikTok" className="grid h-11 w-11 place-items-center rounded-full border border-charcoal/15 text-xs font-black text-olive transition hover:border-olive hover:bg-olive hover:text-white">TK</Link>
           <Link href={siteDetails.phoneHref} className="rounded-full bg-olive px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-charcoal">Call us</Link>
         </div>
 
@@ -48,6 +49,7 @@ export function Header() {
           <div className="flex flex-col gap-4">
             {links.map((link) => <Link key={link.label} href={link.href} onClick={() => setOpen(false)} className="py-1 font-bold text-charcoal">{link.label}</Link>)}
             <Link href={siteDetails.instagramUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 py-1 font-bold text-charcoal"><InstagramIcon className="h-5 w-5 text-olive" />Instagram</Link>
+            <Link href={siteDetails.tiktokUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 py-1 font-bold text-charcoal"><span className="grid h-5 w-5 place-items-center rounded-full bg-olive text-[9px] font-black text-white">TK</span>TikTok</Link>
             <Link href={siteDetails.phoneHref} className="mt-2 rounded-full bg-olive px-5 py-3 text-center text-xs font-bold uppercase tracking-[0.16em] text-white">Call us</Link>
           </div>
         </nav>

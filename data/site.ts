@@ -15,6 +15,7 @@ export const siteDetails = {
   longitude: -74.8814136,
   directionsUrl: "https://maps.app.goo.gl/XT2xhKTiX5WCTj5n8",
   instagramUrl: "https://www.instagram.com/gyroshopdining",
+  tiktokUrl: "https://www.tiktok.com/@gyroshopdining",
   priceRange: "$$",
 };
 

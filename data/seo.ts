@@ -33,7 +33,7 @@ export const localBusinessJsonLd = {
   logo: absoluteUrl("/gyro-shop-logo.png"),
   image: [absoluteUrl("/made-fresh-gyro-platter.jpg"), absoluteUrl("/over-rice-chicken.jpg")],
   description:
-    "Gyro Shop Dining is a 100% halal Greek and Mediterranean restaurant in the Oxford Valley Mall food court in Langhorne, Pennsylvania, serving fresh gyros, platters, over rice meals, falafel, salads, sides, desserts, and drinks.",
+    "Gyro Shop Dining is a family-owned, 100% halal Greek and Mediterranean restaurant in the Oxford Valley Mall food court in Langhorne, Pennsylvania, serving fresh gyros, platters, over rice meals, falafel, salads, sides, desserts, and drinks.",
   telephone: siteDetails.phoneInternational,
   priceRange: siteDetails.priceRange,
   servesCuisine: ["Greek", "Mediterranean", "Halal", "Gyro", "Falafel", "Middle Eastern"],
@@ -56,7 +56,7 @@ export const localBusinessJsonLd = {
   },
   hasMap: siteDetails.directionsUrl,
   openingHoursSpecification,
-  sameAs: [siteDetails.instagramUrl],
+  sameAs: [siteDetails.instagramUrl, siteDetails.tiktokUrl],
   hasMenu: `${siteDetails.siteUrl}/menu`,
   areaServed: [
     "Langhorne PA",

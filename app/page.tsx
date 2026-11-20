@@ -11,7 +11,7 @@ import { hours, siteDetails } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Halal Gyros, Over Rice & Mediterranean Food in Langhorne, PA",
-  description: "Visit Gyro Shop Dining inside Oxford Valley Mall for fresh 100% halal gyros, catering for gatherings and special events, over rice platters, falafel, salads, sides, desserts, and fast Mediterranean food in Langhorne, PA.",
+  description: "Visit family-owned Gyro Shop Dining inside Oxford Valley Mall for fresh 100% halal gyros, catering for gatherings and special events, over rice platters, falafel, salads, sides, desserts, and fast Mediterranean food in Langhorne, PA.",
   alternates: {
     canonical: "/",
   },
@@ -108,7 +108,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">Our story</p>
             <h2 className="section-title mt-4">More Than Just a Gyro Shop</h2>
-            <p className="mt-7 text-base leading-8 text-charcoal/65">Located within the food court of Oxford Valley Mall, Gyro Shop Dining offers a delectable journey into authentic, flavorful cuisine. Every dish is 100% halal and prepared fresh daily, ensuring a premium taste experience.</p>
+            <p className="mt-7 text-base leading-8 text-charcoal/65">Located within the food court of Oxford Valley Mall, Gyro Shop Dining is a family-owned business offering a delectable journey into authentic, flavorful cuisine. Every dish is 100% halal and prepared fresh daily, ensuring a premium taste experience.</p>
             <p className="mt-4 text-base leading-8 text-charcoal/65">The diverse menu features classic gyro sandwiches and platters, alongside succulent chicken and falafel options. Complement your meal with fresh salads, delicious sides, and a sweet dessert to complete the perfect fast and flavorful dining experience.</p>
             <ButtonLink href="/menu" variant="outline" className="mt-8">Explore the menu</ButtonLink>
           </div>

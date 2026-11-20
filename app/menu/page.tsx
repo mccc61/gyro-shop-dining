@@ -62,15 +62,15 @@ export default function MenuPage() {
               </div>
               <div className="grid gap-5 sm:grid-cols-2">
                 {category.items.map((item) => (
-                  <article key={item.name} className={`group overflow-hidden rounded-[1.25rem] border border-charcoal/10 bg-[#FAF9F6] shadow-sm transition hover:-translate-y-1 hover:shadow-soft ${isTextOnly ? "p-5" : ""}`}>
-                    {!isTextOnly && <div className="relative aspect-[16/9] overflow-hidden bg-sand">
-                      <Image src={item.image ?? category.image} alt={`${item.name} at Gyro Shop Dining`} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px" />
+                  <article key={item.name} className={`group overflow-hidden rounded-[1.25rem] border border-charcoal/10 bg-[#FAF9F6] shadow-sm transition hover:-translate-y-1 hover:shadow-soft ${isTextOnly || !item.image ? "p-5" : ""}`}>
+                    {!isTextOnly && item.image && <div className="relative aspect-[16/9] overflow-hidden bg-sand">
+                      <Image src={item.image} alt={`${item.name} at Gyro Shop Dining`} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px" />
                       <span className="absolute right-3 top-3 rounded-full bg-[#FAF9F6]/95 px-3.5 py-2 text-base font-extrabold text-terracotta shadow-sm backdrop-blur">{item.price}</span>
                     </div>}
                     <div className={isTextOnly ? "" : "p-5"}>
                       <div className="flex items-start justify-between gap-4">
                         <h3 className="font-display text-xl font-bold">{item.name}</h3>
-                        {isTextOnly && <span className="shrink-0 text-base font-extrabold text-terracotta">{item.price}</span>}
+                        {(isTextOnly || !item.image) && <span className="shrink-0 text-base font-extrabold text-terracotta">{item.price}</span>}
                       </div>
                       <p className="mt-2 text-sm leading-6 text-charcoal/55">{item.description}</p>
                       {item.tag && <span className="mt-3 inline-block rounded-full bg-sand px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.12em] text-olive">{item.tag}</span>}

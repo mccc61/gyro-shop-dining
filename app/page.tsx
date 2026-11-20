@@ -11,7 +11,7 @@ import { hours, siteDetails } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Halal Gyros, Over Rice & Mediterranean Food in Langhorne, PA",
-  description: "Visit Gyro Shop Dining inside Oxford Valley Mall for fresh 100% halal gyros, over rice platters, falafel, salads, sides, desserts, and fast Mediterranean food in Langhorne, PA.",
+  description: "Visit Gyro Shop Dining inside Oxford Valley Mall for fresh 100% halal gyros, catering for gatherings and special events, over rice platters, falafel, salads, sides, desserts, and fast Mediterranean food in Langhorne, PA.",
   alternates: {
     canonical: "/",
   },
@@ -143,6 +143,20 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 px-5 sm:flex-row sm:items-center lg:px-8">
           <div><p className="text-xs font-bold uppercase tracking-[0.22em] text-white/65">A local favorite</p><h2 className="mt-2 font-display text-4xl font-bold">Taste the best falafel in town.</h2></div>
           <ButtonLink href={siteDetails.phoneHref} variant="light">Call us</ButtonLink>
+        </div>
+      </section>
+
+      <section id="catering" className="bg-[#FAF9F6] px-5 py-20 sm:py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 overflow-hidden rounded-[2rem] bg-[#024579] px-7 py-10 text-white shadow-soft sm:px-12 sm:py-14 lg:grid-cols-[1.25fr_0.75fr] lg:px-16">
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-sand">Gatherings & special events</p>
+            <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight tracking-[-0.03em] sm:text-5xl">Need food for your next gathering?</h2>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/75">We also provide fresh, flavorful halal Mediterranean food for gatherings and special events. From family celebrations to office lunches, Gyro Shop Dining can help make feeding your group easy.</p>
+          </div>
+          <div className="lg:justify-self-end">
+            <p className="text-sm font-bold text-white/70">Call us to discuss your event.</p>
+            <ButtonLink href={siteDetails.phoneHref} variant="light" className="mt-5">Ask about catering</ButtonLink>
+          </div>
         </div>
       </section>
 

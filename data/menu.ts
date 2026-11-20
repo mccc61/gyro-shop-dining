@@ -65,7 +65,7 @@ export const menuCategories: MenuCategory[] = [
     description: "A kid-sized meal with a drink included.",
     image: image("2018/06/greek-gyro-pita-wrap-2026-03-20-03-12-19-utc-390x390.jpg"),
     items: [
-      { name: "Popcorn Chicken", description: "Six pieces of popcorn chicken with fries and a small drink.", price: "$6.99", image: "/popcorn-chicken-kids-meal.webp" },
+      { name: "Popcorn Chicken", description: "Six pieces of popcorn chicken with fries and a small drink.", price: "$6.99", image: "/menu-images/popcorn-chicken.jpg" },
       { name: "Junior Gyro", description: "A junior gyro with lettuce, tomato, onion, tzatziki and a drink.", price: "$6.99", image: image("2018/06/greek-gyro-pita-wrap-2026-03-20-03-12-19-utc-390x390.jpg"), tag: "New" },
     ],
   },

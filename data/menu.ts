@@ -75,7 +75,7 @@ export const menuCategories: MenuCategory[] = [
     image: image("2018/09/miditerranean-vegetable-salad-2026-03-09-06-52-48-utc-390x390.jpg"),
     items: [
       { name: "Greek Salad", description: "Lettuce, tomato, onion, stuffed grape leaves, olives, feta cheese, and Greek dressing. Add any meat for $3.99.", price: "$11.99", image: image("2018/09/miditerranean-vegetable-salad-2026-03-09-06-52-48-utc-390x390.jpg") },
-      { name: "Tossed Salad", description: "Lettuce, tomato, onion, and Greek dressing. Add any meat for $3.99 or feta for $1.99.", price: "$8.99" },
+      { name: "Tossed Salad", description: "Lettuce, tomato, onion, and Greek dressing. Add any meat for $3.99 or feta for $1.99.", price: "$8.99", image: "/menu-images/tossed-salad-fresh-vegetables.jpg" },
       { name: "Chicken Salad", description: "Lettuce, tomato, onion, Greek dressing, and chicken. Add feta for $1.99.", price: "$13.99", image: image("2018/06/salad-with-chicken-vegetables-and-crouton-2026-01-11-08-15-24-utc-390x390.jpg") },
     ],
   },
